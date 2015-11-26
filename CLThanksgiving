@@ -1,0 +1,75 @@
+import sys
+import datetime
+def CindyIntroQuote():
+    value = "Hi! - Cindy Le's famous intro quote"
+    print(value)
+def CindySticker():
+    value = input("giddy or unicorns?")
+    final = value.upper()
+    if final == "GIDDY":
+        print("Here's a giddy sticker!")
+        return
+    if final == "UNICORNS":
+        print("... rainbows and unicorns!")
+        return
+    else:
+        print("What are you talking about?")
+def CindyPoem():
+    print("""   A poem about Cindy Le - By anonymous
+    When you're down and out
+    One of her giddy stickers could cheer you up!
+    When you're lonely and bored
+    Her excitement could blow you into more
+    When you need someone to talk to
+    Long as she's not napping, or eating, or doing stuff, she'll be there!
+    When you need someone to cheer you up
+    Her playfulness will fix you right up!
+    When you need someone to get down to it,
+    Cindy's there to get down to it!""")
+def About():
+    print("""Program created by Kelvin Tran
+    A little surprise for Thanksgiving for Cindy!
+    Programmed using the Python Tools for Visual Studio Community 2015 (PTVS)""")
+def ThinkAboutIt():
+    print("Think about this: If you're her friend, what are you thankful about her for?")
+def FamousQuotes():
+    print("""'Hi!'
+    'LOL!'
+    'Lolz'
+    'What the fudge'
+    'What the heck'
+    'XD' (although probably most of us have that one)
+    '... giddy sticker ...'
+    '... unicorns and rainbows ...' or '... rainbows and unicorns ...'""")
+def IntroScreen():
+    print("""What do you want to do? Type exactly what the word is (without quotes):
+    'intro' if you want to see her intro quote
+    'stickers' to see her famous stickers XD
+    'poem' to see a poem I wrote 
+    'about' to see about info about the program
+    'thinkaboutit' to see a question for you to think about
+    'quotes' to see some of her frequent quotes""")
+    notfinal = input("What do you want to do from that list? (without quotes) ")
+    finalvalue = notfinal.upper()
+    if finalvalue == "INTRO":
+        CindyIntroQuote()
+        IntroScreen()
+    if finalvalue == "STICKERS":
+        CindySticker()
+        IntroScreen()
+    if finalvalue == "POEM":
+        CindyPoem()
+        IntroScreen()
+    if finalvalue == "ABOUT":
+        About()
+        IntroScreen()
+    if finalvalue == "THINKABOUTIT":
+        ThinkAboutIt()
+        IntroScreen()
+    if finalvalue == "QUOTES":
+        FamousQuotes()
+        IntroScreen()
+    else:
+        print("What? Please go back and type the word exactly, not case sensitive without quotes.")
+        IntroScreen()
+IntroScreen()
